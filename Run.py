@@ -10,13 +10,9 @@ def back(img_no):
  
     # We will have global variable to access these
     # variable and change whenever needed
-    global label
+   
     global button_run
     
- 
-    # for clearing the image for new image to pop up
-    label = Label(image=List_images[img_no - 1])
-    label.grid(row=1, column=0, columnspan=3)
     button_run = Button(root, text="run",
                             command)
     
@@ -50,14 +46,6 @@ image_no_1 = ImageTk.PhotoImage(Image.open("smaple1.jfif"))
 # List of the images so that we traverse the list
 List_images = [image_no_1]
  
-label = Label(image=image_no_1)
- 
-# We have to show the the box so this below line is needed
-label.grid(row=1, column=0, columnspan=3)
- 
-# We will have three button back ,forward and exit
-
- 
 button_run = Button(root, text="run",
                         command=lambda: os.startfile('Spring-86.py'))
 
@@ -66,5 +54,4 @@ button_run = Button(root, text="run",
 
 button_run.grid(row=5, column=2)
 
- 
 root.mainloop()
