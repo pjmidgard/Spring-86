@@ -328,14 +328,14 @@ class compression:
                                             sda17=sda3
                                    
                                     
-                                    if   lenfS<=Deep3 or ccc==1:
+                                    if   lenfS<=Deep3 or ccc==2:
                                         Circle_times3=Circle_times2
                                         
                                         if ccc==2:
                                         	Circle_times3=Circle_times2-1
 
 
-                                    if   lenfS<=Deep3 or ccc==1:
+                                    if   lenfS<=Deep3 or ccc==2:
                                             Deep=Deep+2
                                     	   
                                             sda30=bin(Deep)[2:]
@@ -350,7 +350,7 @@ class compression:
                                                          	szx8="0"+szx8
                                                          	z=z+1
                                                 
-                                    if   lenfS<=Deep3 or ccc==1:
+                                    if   lenfS<=Deep3 or ccc==2:
                                     	   
                                             sda29=bin(Circle_times3)[2:]
                                             lenf=len(sda29)
@@ -365,7 +365,7 @@ class compression:
                                                          	z=z+1
                                             		
 
-                                    if   lenfS<=Deep3 or ccc==1:
+                                    if   lenfS<=Deep3 or ccc==2:
 
                                                 lenf=len(sda17)
                                                 szx=""
@@ -380,7 +380,7 @@ class compression:
                                                                         szx="0"+szx
                                                                         z=z+1
 
-                                    if   lenfS<=Deep3 or ccc==1:
+                                    if   lenfS<=Deep3 or ccc==2:
                                     	   
 
 
@@ -396,11 +396,11 @@ class compression:
                                                          	szx9="0"+szx9
                                                          	z=z+1       
 
-                                    if   lenfS<=Deep3 or ccc==1:
+                                    if   lenfS<=Deep3 or ccc==2:
                                             lenf=len(sda17)                                           
                                             sda17=szx9+sda31+szx8+sda30+szx7+sda29+szx+sda17
 
-                                    if   lenfS<=Deep3 or ccc==1:
+                                    if   lenfS<=Deep3 or ccc==2:
                                                 
                                     		L=len(sda17)
                                     		n = int(sda17, 2)
