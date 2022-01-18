@@ -258,6 +258,7 @@ class compression:
                                     
                                     bit=""
                                     e=0
+                                    f=0
                                     De=(e+((2**Deep2)-1)+(2**Deep)-1)
                                     e=De
                                     while f!=1:
