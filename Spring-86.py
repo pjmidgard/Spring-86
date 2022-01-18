@@ -253,6 +253,7 @@ class compression:
                                             ccc=2
                                             
                                     T7 = int(sda3, 2)
+                                    T7=T7-1
                                     
                                     nameas=name+".bin" 
                                     
@@ -327,14 +328,14 @@ class compression:
                                             sda17=sda3
                                    
                                     
-                                    if   lenfS<=Deep3 or ccc==2:
+                                    if   lenfS<=Deep3 or ccc==1:
                                         Circle_times3=Circle_times2
                                         
                                         if ccc==2:
                                         	Circle_times3=Circle_times2-1
 
 
-                                    if   lenfS<=Deep3 or ccc==2:
+                                    if   lenfS<=Deep3 or ccc==1:
                                             Deep=Deep+2
                                     	   
                                             sda30=bin(Deep)[2:]
@@ -349,7 +350,7 @@ class compression:
                                                          	szx8="0"+szx8
                                                          	z=z+1
                                                 
-                                    if   lenfS<=Deep3 or ccc==2:
+                                    if   lenfS<=Deep3 or ccc==1:
                                     	   
                                             sda29=bin(Circle_times3)[2:]
                                             lenf=len(sda29)
@@ -364,7 +365,7 @@ class compression:
                                                          	z=z+1
                                             		
 
-                                    if   lenfS<=Deep3 or ccc==2:
+                                    if   lenfS<=Deep3 or ccc==1:
 
                                                 lenf=len(sda17)
                                                 szx=""
@@ -379,7 +380,7 @@ class compression:
                                                                         szx="0"+szx
                                                                         z=z+1
 
-                                    if   lenfS<=Deep3 or ccc==2:
+                                    if   lenfS<=Deep3 or ccc==1:
                                     	   
 
 
@@ -395,11 +396,11 @@ class compression:
                                                          	szx9="0"+szx9
                                                          	z=z+1       
 
-                                    if   lenfS<=Deep3 or ccc==2:
+                                    if   lenfS<=Deep3 or ccc==1:
                                             lenf=len(sda17)                                           
                                             sda17=szx9+sda31+szx8+sda30+szx7+sda29+szx+sda17
 
-                                    if   lenfS<=Deep3 or ccc==2:
+                                    if   lenfS<=Deep3 or ccc==1:
                                                 
                                     		L=len(sda17)
                                     		n = int(sda17, 2)
@@ -469,7 +470,7 @@ class compression:
                                                 sda3=sda3[48:]
                                                 lenf6=len(sda3)
                                                 print("Deep: ")
-                                                print(Deep7-25-2)
+                                                print(Deep7-25)
                                                 
                                         if   Circle_times2>0:
                                         	xc3=0
@@ -479,20 +480,38 @@ class compression:
                                         if C==1 and T!=0:
                                                 sda3=sda3[xc3:]
                                                 lenf6=len(sda3)
+                                                sda4=sda3[lenf6-Deep4:]
+                                                lenf6=len(sda3)
+                                                lenf8=len(sda3)
                                                 sda3=sda3[0:lenf6-Deep4]
                                                 lenf6=len(sda3)
-                                                if lenf6==0:
-                                                        Corrupted==1
+
+                                                if lenf8==0:
+                                                        Corrupted=1
                                                         
-                                                if lenf6!=0:
-                                                
+                                                elif lenf6==0:
                                                         T8 = int(sda4, 2)
+                                                        T7 = 0
                                                        
                                                         e=0
                                                         
                                                         De=(e+((2**Deep5)-1)+(2**Deep8)-1)
                                                         e=De
                                                         j=e-T8
+                                                        T7=T7+1
+                                                        T7=T7*j
+                                                        
+                                                elif lenf6!=0:
+                                                
+                                                        T8 = int(sda4, 2)
+                                                        T7 = int(sda3, 2)
+                                                       
+                                                        e=0
+                                                        
+                                                        De=(e+((2**Deep5)-1)+(2**Deep8)-1)
+                                                        e=De
+                                                        j=e-T8
+                                                        T7=T7+1
                                                         T7=T7*j
                                                
                                        
