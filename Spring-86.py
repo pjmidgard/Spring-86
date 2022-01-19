@@ -24,29 +24,6 @@ class compression:
                         raise SystemExit
                 if namez=="c" or namez=="e":        
                     if namez=="c":
-
-                        Deep = str(input("Please, enter Deep? "))
-
-                        x = Deep.isnumeric()
-                        if x==False:
-                                print("Sorry this not whole number")
-                                raise SystemExit
-                        
-                        if x==True:
-                                Deep=int(Deep)
-                                Deep6=65535-25
-
-                                if Deep>Deep6:
-                                        Deep=Deep6
-
-                                if Deep<1:
-                                        Deep=26
-                                                
-                                Deep=Deep+25
-                                Deep2=Deep+2
-                                Deep3=Deep*2
-                                print(Deep-25)
-
                         i=1
 
                     if namez=="e":
@@ -256,7 +233,9 @@ class compression:
                                     
                                     nameas=name+".bin"
                                     
-                                    
+                                    Deep2=3
+                                    Deep=1
+                                    Deep3=160
                                     bit=""
                                     e=0
                                     De=(e+((2**Deep2)-1)+(2**Deep)-1)
@@ -291,7 +270,7 @@ class compression:
                                                 g=0
                                         
 
-                                        elif g>(2**(Deep+2))-1 and E1==0:
+                                        elif g>(2**(Deep+2))-1:
                                                 
                                                 f=0
                                                 e=De
@@ -429,7 +408,7 @@ class compression:
 
                                     if   lenfS<=Deep3 or ccc==2:
                                             lenf=len(sda17)                                           
-                                            sda17=szx9+sda31+szx8+sda30+szx7+sda29+szx+sda17
+                                            sda17=szx9+sda31+szx7+sda29+szx+sda17
 
                                     if   lenfS<=Deep3 or ccc==2:
                                                 
@@ -487,20 +466,18 @@ class compression:
                                                 sda3=sda3[8:]
                                                 lenf6=len(sda3)
 
-                                                sda10=sda3[0:16]
-                                                Deep5 = int(sda10, 2)
-                                                Deep5=Deep5
+                                               
+                                                Deep5=3
                                                 Deep4=Deep5
-                                                sda3=sda3[16:]
                                                 lenf6=len(sda3)
-                                                Deep7=Deep5-2
+                                                Deep7=1
                                                 
                                                 sda6=sda3[0:48]
                                                 T = int(sda6, 2)
                                                 sda3=sda3[48:]
                                                 lenf6=len(sda3)
-                                                print("Deep: ")
-                                                print(Deep7-25)
+                                                
+                                        
                                                 
                                         if   Circle_times2>0:
                                         	xc3=0
