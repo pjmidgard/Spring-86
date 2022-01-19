@@ -254,7 +254,8 @@ class compression:
                                             
                                     T7 = int(sda3, 2)
                                     
-                                    nameas=name+".bin" 
+                                    nameas=name+".bin"
+                                    
                                     
                                     bit=""
                                     e=0
