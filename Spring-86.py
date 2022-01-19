@@ -329,7 +329,7 @@ class compression:
                               
                                     
                                     lenfS=len(sda17)
-                                    print(lenfS)
+                                    #print(lenfS)
 
                                     if ccc==2 and Circle_times2==0:
                                                     sda3=sda3[1:]
