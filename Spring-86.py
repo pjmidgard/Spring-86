@@ -527,7 +527,7 @@ class compression:
                                                         De=(e+((2**Deep5)-1)+(2**Deep8)-1)
                                                         e=De
                                                         j=e-T8
-                                                        T7=T7+1
+                                                        
                                                         T7=T7*j
                                                         
                                                 elif lenf6!=0:
@@ -540,7 +540,7 @@ class compression:
                                                         De=(e+((2**Deep5)-1)+(2**Deep8)-1)
                                                         e=De
                                                         j=e-T8
-                                                        T7=T7+1
+                                                        
                                                         T7=T7*j
                                        
                                     sda6=sda4
