@@ -61,7 +61,7 @@ class compression:
                                 if Deep14>Deep12:
                                         Deep14=Deep12
 
-                                if Deep12<1:
+                                if Deep14<1:
                                         Deep14=1
                                                 
                                 Deep14=Deep14+1
