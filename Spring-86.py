@@ -55,7 +55,7 @@ class compression:
                                 raise SystemExit
                         
                         if x==True:
-                                Deep14=int(Deep)
+                                Deep14=int(Deep14)
                                 Deep12=65535-1
 
                                 if Deep14>Deep12:
