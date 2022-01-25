@@ -505,9 +505,10 @@ class compression:
                                         	
     
                                         if C==1 and T!=0:
-                                                sda3=sda3[::-1]
+                                                
                                                 sda3=sda3[xc3:]
                                                 lenf6=len(sda3)
+                                                sda3=sda3[::-1]
                                                 sda4=sda3[lenf6-Deep4:lenf6-1]
                                                 sda5=sda3[lenf6-1:lenf6]
                                                 sda3=sda3[0:lenf6-Deep4]
