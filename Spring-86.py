@@ -252,7 +252,7 @@ class compression:
                                     if Circle_times2>=(2**48)-3:
                                             ccc=2
 
-                                    sda3=sda3[::-1]
+                                    
                                             
                                     T7 = int(sda3, 2)
                                     
@@ -336,6 +336,7 @@ class compression:
                                     if ccc==1:
                                            
                                             sda17=sda17+szx4+sda23+bit
+                                            sda17=sda17[::-1]
                                             sda18=sda3
                                             #print(len(sda17))
                               
