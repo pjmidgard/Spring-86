@@ -548,7 +548,7 @@ class compression:
                                                 sda4=sda3[lenf6-4:lenf6]
                                                 T8 = int(sda5, 2)
                                                 if T8<=15:
-                                                        sda4=sda3[lenf6-4lenf6-1]
+                                                        sda4=sda3[lenf6-4:lenf6-1]
                                                         sda3=sda3[0:lenf6-4]
                                                         
                                                 else:
