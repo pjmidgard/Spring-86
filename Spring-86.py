@@ -258,6 +258,10 @@ class compression:
                                     
                                     bit=""
 
+                                    Deep=9
+                                    Deep2=11
+                                    
+
                                     e=(2**Deep2)-1
                                     e1=1
                                     g=0
@@ -271,11 +275,9 @@ class compression:
                                                 bit="0"
 
                                         else:
-                                                if g<(2**Deep)-13:
-                                                        e=e+1
-                                                if g>(2**Deep)-13:
-                                                        e1=e1+1
-                                                        e=e1
+                                               
+                                                e=e+1
+                                                
                                                         
                                                 
                                                 g=g+1
@@ -325,7 +327,13 @@ class compression:
                                     if ccc==1:
                                     	                          
                                             sda23=bin(g)[2:]
-                                            hr=Deep
+
+                                            if bit=="0":
+                                                    hr=Deep
+
+                                            if bit=="1":
+                                                    hr=4
+                                            
                                             
                                         	
                                             lenf=len(sda23)
@@ -516,9 +524,15 @@ class compression:
                                         if C==1 and T!=0:
                                                 sda3=sda3[xc3:]
                                                 lenf6=len(sda3)
-                                                sda4=sda3[lenf6-Deep4:lenf6-1]
                                                 sda5=sda3[lenf6-1:lenf6]
-                                                sda3=sda3[0:lenf6-Deep4]
+                                                if T9==1:
+                                                        sda5=sda3[lenf6-4:lenf6]
+                                                        sda3=sda3[0:lenf6-4]
+                                                else:
+                                                        sda4=sda3[lenf6-Deep4:lenf6-1]
+                                                        sda3=sda3[0:lenf6-Deep4]
+                                                
+                                                
                                         
                                                 
                                                 T7 = int(sda3, 2)
@@ -527,9 +541,9 @@ class compression:
                                                 e=(2**Deep5)-1
                                                 e1=((2**Deep5)-1)+(2**(Deep7)-1)
                                                 g=T8
-                                                if g<(2**Deep7)-13:
+                                                if g<(2**Deep7)-13 and T9==1:
                                                         e=e+1
-                                                if g>(2**Deep7)-13:
+                                                if g>(2**Deep7)-13 and T9==1:
                                                         e1=e1+1
                                                         e=e1
                                                 
