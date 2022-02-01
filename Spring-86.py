@@ -264,7 +264,7 @@ class compression:
 
                                     e=(2**Deep2)-1
                                     e1=1
-                                    g=0
+                                    g=15
                                     f=0
                                     T6=0
                                     while f!=1:
@@ -276,11 +276,23 @@ class compression:
 
                                         else:
                                                
-                                                e=e+1
-                                                
                                                         
-                                                
+                                                if g<(2**Deep)-13:
+                                                        e=e+1
+                                                if g>(2**Deep)-13:
+                                                        e1=e1+1
+                                                        e=e1
+                                                                
+                                                        
                                                 g=g+1
+
+                                                if g<(2**Deep)-13:
+                                                        e=e+1
+                                                        g=e
+                                                if g>(2**Deep)-13:
+                                                        e1=e1+1
+                                                        e=e1
+                                                        g=e
                                           
                                         if g>(2**Deep)-1:
                                                 bit="1"
@@ -290,7 +302,7 @@ class compression:
                                     if  g>(2**Deep)-1:
                                             e=(2**Deep2)-1
                                             e1=1
-                                            g=0
+                                            g=15
                                             f=0
                                             T6=0
                                             while f!=1:
@@ -310,6 +322,14 @@ class compression:
                                                                 
                                                         
                                                         g=g+1
+
+                                                        if g<(2**Deep)-13:
+                                                                e=e+1
+                                                                g=e
+                                                        if g>(2**Deep)-13:
+                                                                e1=e1+1
+                                                                e=e1
+                                                                g=e
                                                   
                                                 if g>(2**Deep)-1:
                                                         bit="1"
@@ -332,13 +352,12 @@ class compression:
                                                     hr=Deep
 
                                             if bit=="1":
-                                                    hr=4
+                                                    hr=3
                                             
                                             
                                         	
                                             lenf=len(sda23)
-                                            if lenf>Deep:
-                                            	ccc=2
+                                            
 
                                             if ccc==1:
                                                     
@@ -359,7 +378,7 @@ class compression:
                               
                                     
                                     lenfS=len(sda17)
-                                    #print(lenfS)
+                                    print(lenfS)
 
                                     if ccc==2 and Circle_times2==0:
                                                     sda3=sda3[1:]
@@ -525,9 +544,13 @@ class compression:
                                                 sda3=sda3[xc3:]
                                                 lenf6=len(sda3)
                                                 sda5=sda3[lenf6-1:lenf6]
-                                                if T9==1:
-                                                        sda5=sda3[lenf6-4:lenf6]
+                                                
+                                                sda4=sda3[lenf6-4:lenf6]
+                                                T8 = int(sda5, 2)
+                                                if T8<=15:
+                                                        sda4=sda3[lenf6-4lenf6-1]
                                                         sda3=sda3[0:lenf6-4]
+                                                        
                                                 else:
                                                         sda4=sda3[lenf6-Deep4:lenf6-1]
                                                         sda3=sda3[0:lenf6-Deep4]
@@ -541,9 +564,9 @@ class compression:
                                                 e=(2**Deep5)-1
                                                 e1=((2**Deep5)-1)+(2**(Deep7)-1)
                                                 g=T8
-                                                if g<(2**Deep7)-13 and T9==1:
+                                                if T8<=15:
                                                         e=e+1
-                                                if g>(2**Deep7)-13 and T9==1:
+                                                if T8<=15:
                                                         e1=e1+1
                                                         e=e1
                                                 
