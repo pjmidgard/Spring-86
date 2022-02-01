@@ -352,7 +352,7 @@ class compression:
                                                     hr=Deep
 
                                             if bit=="1":
-                                                    hr=3
+                                                    hr=4
                                             
                                             
                                         	
