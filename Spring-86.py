@@ -458,7 +458,9 @@ class compression:
                                                 lenf6=len(sda3)
                                                 T7 = int(sda3, 2)     
      
-                                                T8 = int(sda3, 2)     
+                                                T8 = int(sda3, 2)
+
+                                                ei=0
 
                                                 while ei<lenf6:
                                                         T9=T8
@@ -473,6 +475,7 @@ class compression:
                                                                         szx="0"+szx
                                                                         z=z+1
                                                         sda17=sda17+szx
+                                                        ei=ei+Deep5
                                                         
                                                      
                                                 
