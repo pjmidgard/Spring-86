@@ -273,21 +273,22 @@ class compression:
                                             ghjd=T8*lenf8
                                             cvz=cvz+ghjd
                                             ei=ei+Deep
+
+                                     
                                     
                                     if ccc==1:
+                                            
                                             szx=bin(cvz)[2:]
+                                            sda17=szx
                            
                                                
                                     if ccc==1:
                                     		nameas=name+".bin" 
                                     
-                                  
-                                    if ccc==1:
-                                    	
-                                    	    sda17=bin(T7)[2:]
-                              
                                     
                                     lenfS=len(sda17)
+                                    if lenfS>=lenf6:
+                                            ccc=2
                                     #print(lenfS)
 
                                     if ccc==2 and Circle_times2==0:
@@ -301,6 +302,8 @@ class compression:
                                     if ccc==2:
                                             
                                             sda17=sda3
+
+                                   
                                    
                                     
                                     if   lenfS<=Deep3 or ccc==2:
