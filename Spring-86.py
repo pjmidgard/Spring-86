@@ -479,7 +479,7 @@ class compression:
                                                                     while z<xc:
                                                                         szx="0"+szx
                                                                         z=z+1
-                                                        sda17=sda18+szx+sda18
+                                                        sda17=sda17+szx+sda18
                                                         ei=ei+Deep5
                                                         
                                                         
