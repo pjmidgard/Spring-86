@@ -246,14 +246,22 @@ class compression:
                                     sda17=""
 
                                     ei=0
+                                    
+                                    sda6=""
 
                                     while ei<lenf6:
-                                            sda4=sda3[ei:ei+1]
-                                            sda5=sda3[ei+1:ei+2]
-                                            sda5=sda5[::-1]
-                                            sda3=sda3+sda4+sda5
+                                            sda14=sda3[ei:ei+1]
+                                            sda15=sda3[ei+1:ei+2]
+                                            sda15=sda15[::-1]
+                                            sda6=sda6+sda14+sda15
                                             
                                             ei=ei+2
+
+                                    sda3=sda6
+                                    sda6=""
+
+
+                                    
                  
                                     if   Circle_times2==0 and SpinS==0:
                                     	sda3="1"+sda3
@@ -522,6 +530,21 @@ class compression:
                                                 sda4=sda3[lenf6-Deep4:lenf6-1]
                                                 sda5=sda3[lenf6-1:lenf6]
                                                 sda3=sda3[0:lenf6-Deep4]
+
+                                                       
+                                                sda6=""
+
+                                                while ei<lenf6:
+                                                    sda14=sda3[ei:ei+1]
+                                                    sda15=sda3[ei+1:ei+2]
+                                                    sda15=sda15[::-1]
+                                                    sda6=sda6+sda14+sda15
+                                                    
+                                                    ei=ei+2
+
+                                                sda3=sda6
+                                                sda6=""
+
                                         
                                                 
                                                 T7 = int(sda3, 2)
