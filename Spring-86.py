@@ -296,9 +296,7 @@ class compression:
                                     
                                     
                                     lenfS=len(sda17)
-                                    if lenfS>=lenf6 and Circle_times2>0:
-                                            ccc=2
-                                
+                                 
 
                                     if ccc==2 and Circle_times2==0:
                                                     sda3=sda3[1:]
