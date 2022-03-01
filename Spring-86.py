@@ -268,7 +268,7 @@ class compression:
 
                                     ei=0
                                     kl=lenf6//Deep
-                                   
+                                    
                                     lenf8=((2**Deep)-1)**(kl)
                                     cvz=0
                                     
@@ -494,6 +494,8 @@ class compression:
                                                         
                                                        
                                                         sda19=sda19[lenf-(Deep5):]
+                                                        if T9==0:
+                                                                sda19=""
                                                        
                                                         sda17=sda19+sda17
                                                         
