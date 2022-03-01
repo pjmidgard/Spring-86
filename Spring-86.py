@@ -299,6 +299,7 @@ class compression:
                                     if lenfS>=lenf6:
                                             ccc=2
                                     #print(lenfS)
+                                    
 
                                     if ccc==2 and Circle_times2==0:
                                                     sda3=sda3[1:]
@@ -313,7 +314,7 @@ class compression:
                                             sda17=sda3
 
                                    
-                                   
+                                    
                                     
                                     if   lenfS<=Deep3 or ccc==2:
                                         Circle_times3=Circle_times2
