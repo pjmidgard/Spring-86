@@ -47,7 +47,7 @@ class compression:
                                                 
                               Deep=Deep
                               Deep2=Deep+2
-                              Deep3=Deep*2
+                              Deep3=160
                               print(Deep)
 
                 
@@ -268,15 +268,14 @@ class compression:
 
                                     ei=0
                                     kl=lenf6//Deep
-                                    
+                                   
                                     lenf8=((2**Deep)-1)**(kl)
                                     cvz=0
                                     
                                     while ei<lenf6:
 
                                             T8 = int(sda3[ei:ei+Deep], 2)
-                                            if T8==((2**Deep)-1):
-                                                     ccc=2
+                                            
                                             lenf8=lenf8//((2**Deep)-1)
                                             
                                             ghjd=T8*lenf8
