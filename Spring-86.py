@@ -47,7 +47,7 @@ class compression:
                                                 
                               Deep=Deep
                               Deep2=Deep+2
-                              Deep3=160
+                              Deep3=Deep*2
                               print(Deep)
 
                 
@@ -268,14 +268,14 @@ class compression:
 
                                     ei=0
                                     kl=lenf6//Deep
-                                   
                                     lenf8=((2**Deep)-1)**(kl)
                                     cvz=0
                                     
                                     while ei<lenf6:
 
                                             T8 = int(sda3[ei:ei+Deep], 2)
-                                            
+                                            if T8==((2**Deep)-1):
+                                                     ccc=2
                                             lenf8=lenf8//((2**Deep)-1)
                                             
                                             ghjd=T8*lenf8
@@ -295,7 +295,9 @@ class compression:
                                     
                                     
                                     lenfS=len(sda17)
-                                 
+                                    if lenfS>=lenf6:
+                                            ccc=2
+                                    #print(lenfS)
 
                                     if ccc==2 and Circle_times2==0:
                                                     sda3=sda3[1:]
@@ -310,7 +312,7 @@ class compression:
                                             sda17=sda3
 
                                    
-                                    
+                                   
                                     
                                     if   lenfS<=Deep3 or ccc==2:
                                         Circle_times3=Circle_times2
@@ -466,37 +468,42 @@ class compression:
      
                                                 T9= int(sda3, 2)
                                                 lenf8=lenf6//Deep5
+                                              
 
-                                                while T9!=0:
-                                                        sda19=""
+                                                ei=0
+
+                                                while ei<=lenf6:
+                                                        
                                                         
                                                         T10=T9%((2**Deep5)-1)
                                                                                       
                                                         T9=T9//((2**Deep5)-1)
-                                                       
+                                                        
                                                         
                                                         sda18=bin(T10)[2:]
-                                                        lenf=len(sda18)
                                                         szx=""
                                                         xc=Deep5-lenf%Deep5
                                                         z=0
                                                         if xc!=0:
                                                                 if xc!=Deep5:
-                                                                        while z<xc:
-                                                                                szx="0"+szx
-                                                                                z=z+1
+                                                                    while z<xc:
+                                                                        szx="0"+szx
+                                                                        z=z+1
 
                                                         sda19=szx+sda18
                                                         lenf=len(sda19)
                                                         
-                                                       
-                                                        sda19=sda19[lenf-(Deep5):]
-                                                        if T9==0:
-                                                                sda19=""
-                                                       
-                                                        sda17=sda19+sda17
+                                                        sda17=sda17+sda19
+                                                        ei=ei+Deep5
                                                         
-                           
+                                                        
+                                                        
+                                                        
+                                                        
+                                                     
+                                                
+                                               
+                                       
                                     sda6=sda4
                                     sda4=""
                                       
@@ -542,7 +549,7 @@ class compression:
  
                                             	sda17=sda17[1:]
                                             	lenf14=len(sda17)
-                                            	
+                                            	#print(lenf14)
                                             	lenf16=lenf14%8
 
                                             	lenf=len(sda17)
