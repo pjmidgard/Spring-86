@@ -484,7 +484,7 @@ class compression:
                                                 sda10=sda3[0:16]
                                                 Deep5 = int(sda10, 2)
                                                 Deep5=Deep5+5
-                                                Deep4=Deep5-1
+                                                Deep4=Deep5-4
                                                 sda3=sda3[16:]
                                                 lenf6=len(sda3)
                                                 Deep7=Deep5-5
